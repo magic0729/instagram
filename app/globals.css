@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  /* Kudeeexpress-like tokens (adapted to JustInfluence purple theme) */
+  --color-primary: #7c3aed; /* violet-600 */
+  --color-primaryDark: #2e1065; /* violet-950 */
+  --color-lightPrimaryDark: #f5f3ff; /* violet-50 */
+  --color-secondary: #64748b; /* slate-500 */
+  --color-cblack: #0f172a; /* slate-900 */
+  --color-cGrey: #94a3b8; /* slate-400 */
+
+  --radius-xlg: 1.25rem;
+  --radius-3xl: 1.5rem;
+  --shadow-soft: 0 10px 30px rgba(2, 6, 23, 0.08);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+.ji-sideBg {
+  background:
+    radial-gradient(1200px 600px at 10% 20%, rgba(124, 58, 237, 0.35), transparent 60%),
+    radial-gradient(900px 500px at 70% 30%, rgba(167, 139, 250, 0.30), transparent 55%),
+    linear-gradient(135deg, #2e1065 0%, #4c1d95 40%, #7c3aed 100%);
+}
